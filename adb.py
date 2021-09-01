@@ -35,15 +35,7 @@ def main():
     print(Fore.YELLOW+'8- Clear the console      16- Run a specific app (require package name)')                              
     print(Fore.YELLOW+'9- Exit                   17- Package manger (app)')
     print(Fore.YELLOW+'18- Dump permissions for a specific app')
-main()
-def curdir():
-    dir = os.getcwd()
-    os.chdir("platform-tools")
-    dir2 =os.getcwd()
-    print(Fore.CYAN+'Current directory',dir2)
-    print(Fore.GREEN+'[+]Starting adb server')
-curdir()
-
+    
 def adb():
     try:
         os.system("adb start-server")
@@ -76,7 +68,7 @@ def adb():
              sys.exit()
         elif user_option== '10':
             print(Fore.GREEN+'[+]Starting scrcpy service')
-            os.system("scrcpy.exe")
+            os.system("scrcpy")
         elif user_option=='11':
              dir_of_apk=input("Directory of the apk file :")
              os.system("adb install "+dir_of_apk+"")
