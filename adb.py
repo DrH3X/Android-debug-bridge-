@@ -5,7 +5,7 @@ import socket
 import colorama
 from colorama import Fore
 def main():
-    os.system("cls")
+    os.system("clear")
     print(Fore.GREEN+'''
               _ _       ______            _       _ _        _   _               ______                                           _    
      /\      | | |     |  ____|          | |     (_) |      | | (_)             |  ____|                                         | |   
@@ -35,7 +35,7 @@ def main():
     print(Fore.YELLOW+'8- Clear the console      16- Run a specific app (require package name)')                              
     print(Fore.YELLOW+'9- Exit                   17- Package manger (app)')
     print(Fore.YELLOW+'18- Dump permissions for a specific app')
-    
+main()    
 def adb():
     try:
         os.system("adb start-server")
@@ -59,7 +59,7 @@ def adb():
              old_pattern=input("Enter old pattern to remove :")
              os.system("adb shell locksettings clear --old "+old_pattern+"")
         elif user_option == '8':
-             os.system("cls")
+             os.system("clear")
              main()
         elif user_option == '7':
              code_verify=input("Enter (pin/password/pattern) to verify :")
