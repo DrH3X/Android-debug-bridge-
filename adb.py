@@ -129,8 +129,6 @@ def adb():
             os.system("adb devices -l ")
         elif user_option=='16':
             device_name1=input("Enter Device name (ip/serialno) : ")
-            package_name=input("Enter the first character of the specific app :")
-            os.system("adb -s "+device_name1+" shell pm list package "+package_name+"")
             specific_app=input("Enter the package name :")
             os.system("adb -s "+device_name1+" shell monkey -p "+specific_app+" -v 500")
         elif user_option=='17':
